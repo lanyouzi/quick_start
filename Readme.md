@@ -1,7 +1,7 @@
 <!--
  * @Author: mrk-lyz mrk_lanyouzi@yeah.net
  * @Date: 2022-06-24 21:18:08
- * @LastEditTime: 2022-06-24 21:30:15
+ * @LastEditTime: 2022-06-24 21:33:55
  * @FilePath: /quick_start/Readme.md
  * @Description: 
  * 
@@ -28,7 +28,7 @@
 
    ```bash
    cd pd
-   tar-zxvf data.tar.gz
+   tar -zxvf data.tar.gz
    ```
 
 2. **Generate spetrograms.** The raw dataset contains temporal signals acquired by accelerometers. The first step is to convert them into time-frequency spectrograms. We mainly concentrate on **forward walking** data, you can also select **backward** by changing `is_back` in the file. Besides, you may need to modify `data_dir`, which represents the dataset folder. After that you will get `result` and `result_backward` folders in the sibling directory.
