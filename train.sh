@@ -1,0 +1,1 @@
+python3 train.py -d . -r /mnt/DataCenter/maruokai/datasets/pd/result/feature_seg -w 4 -T 10
