@@ -24,7 +24,7 @@
 
 ## Data Preprocessing
 
-1. **Download datasets.** ~~You can download PD datasets [here](http://) and transfer files to the cloud server.~~ Required data has been uploaded to CASE Server. You can find it in path `/Data/common/`.
+1. **Download datasets.** Required data has been uploaded to CASE Server. You can find it in path `/Data/common/`. ~~You can download PD datasets [here](http://) and transfer files to the cloud server.~~
 
 ```bash
    cd /Data/common
