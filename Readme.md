@@ -24,21 +24,21 @@
 
 ## Data Preprocessing
 
-1. **Download datasets.** You can download PD datasets [here](http://) and transfer files to the cloud server. 
+1. **Download datasets.** ~~You can download PD datasets [here](http://) and transfer files to the cloud server.~~ Required data has been uploaded to CASE Server. You can find it in path `/Data/common/`.
 
-   ```bash
-   cd pd
+```bash
+   cd /Data/common
    tar -zxvf data.tar.gz
-   ```
+```
 
-2. **Generate spetrograms.** The raw dataset contains temporal signals acquired by accelerometers. The first step is to convert them into time-frequency spectrograms. We mainly concentrate on **forward walking** data, you can also select **backward** by changing `is_back` in the file. Besides, you may need to modify `data_dir`, which represents the dataset folder. After that you will get `result` and `result_backward` folders in the sibling directory.
+1. **Generate spetrograms.** The raw dataset contains temporal signals acquired by accelerometers. The first step is to convert them into time-frequency spectrograms. We mainly concentrate on **forward walking** data, you can also select **backward** by changing `is_back` in the file. Besides, you may need to modify `data_dir`, which represents the dataset folder. After that you will get `result` and `result_backward` folders in the sibling directory. **You can also directly use the spectrograms we have prepared in advance as you wish.**
 
 ```bash
     cd quick_start
     python segment.py
 ```
 
-3. **Make pairings.** Since we want to identify whether the user is taking medication, we should prepare spectrogram pairings. The main idea is to use the earliest post-dose data to match the latest pre-dose data. You can change `spg_path`(spectrogram directory), `data_dir`(the same as step 2) and `topk`(subjects numbers) as  you wish.
+1. **Make pairings.** Since we want to identify whether the user is taking medication, we need to prepare spectrogram pairings. The main idea is to use the earliest post-dose data to match the latest pre-dose data. You are supposed to modify saveral parameters: `spg_path`(spectrogram directory), `data_dir`(the same as step 2) and `topk`(subjects numbers).
 
    ```bash
    python data_prepare.py
@@ -69,4 +69,4 @@ And then you can  train directly. You may need to modify some parameters, the de
 sh train.sh
 ```
 
-Notice that this project is just a simple sample for quick start. We do NOT use sophisticated models and subtle optimizations. If you want to get a higher performance, you can customize the model structure and training process.
+Notice that this project is just a simple sample for quick start. We do NOT use sophisticated models and subtle optimizations. If you want to get a higher performance, **you can customize the model structure and training process.**
