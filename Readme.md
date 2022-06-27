@@ -7,7 +7,7 @@
  * 
  * Copyright (c) 2022 by mrk-lyz mrk_lanyouzi@yeah.net, All Rights Reserved. 
 -->
-# Tutorial of Medicine Intake Detection
+# Tutorial of Drug Resistance Detection
 
 ## Environment Initialing
 
@@ -38,7 +38,7 @@
     python segment.py
 ```
 
-1. **Make pairings.** Since we want to identify whether the user is taking medication, we need to prepare spectrogram pairings. The main idea is to use the earliest post-dose data to match the latest pre-dose data. You are supposed to modify saveral parameters: `spg_path`(spectrogram directory), `data_dir`(the same as step 2) and `topk`(subjects numbers).
+1. **Make pairings.** Since we want to identify whether the patient develops resistance to the drug, we need to prepare spectrogram pairings. The main idea is to use the earliest post-dose data to match the latest pre-dose data. You are supposed to modify saveral parameters: `spg_path`(spectrogram directory), `data_dir`(the same as step 2) and `topk`(subjects numbers).
 
    ```bash
    python data_prepare.py
