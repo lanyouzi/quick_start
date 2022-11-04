@@ -24,7 +24,7 @@
 
 ## Data Preprocessing
 
-1. **Download datasets.** Required data has been uploaded to CASE Server. You can find it in path `/Data/common/`. ~~You can download PD datasets [here](http://) and transfer files to the cloud server.~~
+1. **Download datasets.** Required data has been uploaded to CASE Server. You can find it in path `/Data/common/`. ~~You can download PD datasets here and transfer files to the cloud server.~~
 
 ```bash
    cd /Data/common
@@ -49,7 +49,9 @@
 
 Now suppose you have the following file structure:
 
-BASE_PATH
+![file tree](figs/tree.png)
+
+<!-- BASE_PATH
 ├── pd (from cloud)
 │   ├── data (from tar.gz)
 │   ├── pd_gait.csv
@@ -62,7 +64,7 @@ BASE_PATH
     ├── segment.py
     ├── ShuffleNet
     ├── train.py
-    └── train.sh
+    └── train.sh -->
 
 And then you can  train directly. You may need to modify some parameters, the description of which are given in `train.py`. Given the large size of the dataset, we used a downsampling method (`WeightedRandomSampler`) to speed up the training stage.
 
