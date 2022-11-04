@@ -35,6 +35,7 @@
 
 ```bash
     cd quick_start
+    unzip ShuffleNet.zip
     python segment.py
 ```
 

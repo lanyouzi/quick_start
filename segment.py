@@ -183,7 +183,9 @@ def query_csv(csv_file, data_path, feature_save_path, hc_path, feature_aug_path,
             fi_vertical = []
 
             if not data or len(data) <= 200:
-                continueo.
+                continue
+
+            for item in data:
                 x = item.get("userAcceleration").get("x")
                 y = item.get("userAcceleration").get("y")
                 z = item.get("userAcceleration").get("z")
